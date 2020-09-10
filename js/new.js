@@ -86,7 +86,7 @@ const response = [
 
 const character = getCharacter()
 
-const content = `내 이름은 ${character}, 지금부터 이야기를 하나 말하겠다<br>시간은 ${choice(howOld)} ${choice(when)} 쯤의 이야기다<br><br>`
+let content = `내 이름은 ${character}, 지금부터 이야기를 하나 말하겠다<br>시간은 ${choice(howOld)} ${choice(when)} 쯤의 이야기다<br><br>`
 content += `나는 ${choice(doing)}하고 있었다.<br>갑자기 ${getCharacter()}(이)가 나타나 이렇게 말했다<br><br>"${choice(quotes)}"<br><br>나는 그것을 듣고 ${choice(reactions)} ${choice(response)}`
 
 document.getElementsByClassName('content')[0].innerHTML = content
