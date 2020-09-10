@@ -17,13 +17,13 @@ const characters = [
     '두곰'
 ]
 
-const get_character = () => {
+const getCharacter = () => {
     c = choice(characters)
     characters.splice(characters.indexOf(c))
     return c
 }
 
-const how_old = [
+const howOld = [
     '아주 먼 옛날 ',
     '아주 가까운 옛날 '
 ]
@@ -84,9 +84,9 @@ const response = [
     'HTML라는 최고의 백엔드 프로그래밍 언어로 웹을 개발해서 최고의 브라우저인 인터넷 익스플로러로 사이트를 보았다'
 ]
 
-const character = get_character()
+const character = getCharacter()
 
-var content = '내 이름은 ' + character + ', 지금부터 이야기를 하나 말하겠다<br>시간은 ' + choice(how_old) + choice(when) + '쯤의 이야기다<br><br>'
-content += '나는 ' + choice(doing) + '하고 있었다.<br>갑자기 ' + get_character() + '(이)가 나타나 이렇게 말했다<br><br>"' + choice(quotes) + '"<br><br>나는 그것을 듣고 ' + choice(reactions) + ' ' + choice(response)
+const content = `내 이름은 ${character}, 지금부터 이야기를 하나 말하겠다<br>시간은 ${choice(howOld)} ${choice(when)} 쯤의 이야기다<br><br>`
+content += `나는 ${choice(doing)}하고 있었다.<br>갑자기 ${getCharacter()}(이)가 나타나 이렇게 말했다<br><br>"${choice(quotes)}"<br><br>나는 그것을 듣고 ${choice(reactions)} ${choice(response)}`
 
 document.getElementsByClassName('content')[0].innerHTML = content

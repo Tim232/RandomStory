@@ -30,4 +30,7 @@ button {
     border: 0px none;
     
     opacity: .8;
+
+    cursor: pointer;
+    outline: none;
 }
